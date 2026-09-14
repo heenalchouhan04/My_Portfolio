@@ -18,6 +18,31 @@
   object-fit: cover;
 }
 
+.project-modal-gallery-thumbs {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-modal-thumb-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-modal-thumb-btn.active {
+  background-color: var(--accent-lavender);
+  border-color: var(--accent-lavender);
+  color: #ffffff;
+}
+
 .project-modal-meta {
   display: flex;
   align-items: center;

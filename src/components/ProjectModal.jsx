@@ -1,12 +1,20 @@
-import React from 'react';
-import { X, ExternalLink } from 'lucide-react';
-import { GithubIcon } from './SocialIcons';
+import React, { useState, useEffect } from 'react';
+import { X, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { LinkedinIcon, GithubIcon } from './SocialIcons';
 import '../styles/Modal.css';
 import '../styles/ProjectModal.css';
 import { handleImageError } from '../utils/handleImageError';
 
 const ProjectModal = ({ project, onClose }) => {
   if (!project) return null;
+
+  const [activeImage, setActiveImage] = useState(project.image);
+
+  useEffect(() => {
+    if (project) {
+      setActiveImage(project.image);
+    }
+  }, [project]);
 
   return (
     <div
@@ -26,11 +34,26 @@ const ProjectModal = ({ project, onClose }) => {
 
         <div className="project-modal-image">
           <img
-            src={project.image}
+            src={activeImage}
             alt={project.title}
             onError={handleImageError}
           />
         </div>
+
+        {/* Gallery Thumbnails Switcher */}
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="project-modal-gallery-thumbs">
+            {project.gallery.map((item, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveImage(item.url)}
+                className={`project-modal-thumb-btn ${activeImage === item.url ? 'active' : ''}`}
+              >
+                <span>{item.title}</span>
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="project-modal-meta">
           <span className="project-modal-category">
@@ -46,14 +69,30 @@ const ProjectModal = ({ project, onClose }) => {
           {project.summary}
         </p>
 
+        {project.highlights && (
+          <div className="project-modal-highlights">
+            <div className="project-modal-tech-label">
+              KEY HIGHLIGHTS:
+            </div>
+            <ul className="project-modal-highlights-list">
+              {project.highlights.map((h, i) => (
+                <li key={i}>
+                  <CheckCircle2 size={16} />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="project-modal-tech-section">
           <div className="project-modal-tech-label">
-            TECHNOLOGIES & TOOLS USED:
+            TOOLS &amp; TECHNOLOGIES USED:
           </div>
           <div className="project-modal-tech-tags">
             {project.tags.map((t, idx) => (
               <span key={idx} className="project-modal-tech-tag">
-                {t}
+                #{t}
               </span>
             ))}
           </div>
@@ -61,17 +100,17 @@ const ProjectModal = ({ project, onClose }) => {
 
         <div className="modal-actions">
           <a
-            href={project.demoUrl}
+            href={project.linkedinUrl || 'https://linkedin.com/in/heenal'}
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary project-modal-demo-btn"
           >
-            <span>Live Interactive Demo</span>
-            <ExternalLink size={18} />
+            <LinkedinIcon size={18} />
+            <span>View on LinkedIn</span>
           </a>
 
           <a
-            href={project.githubUrl}
+            href={project.githubUrl || 'https://github.com/heenalchouhan04'}
             target="_blank"
             rel="noreferrer"
             className="btn btn-secondary project-modal-github-btn"

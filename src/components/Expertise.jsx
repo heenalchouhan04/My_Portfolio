@@ -65,10 +65,6 @@ const Expertise = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">SERVICES &amp; CAPABILITIES</span>
-          <h2 className="section-title">What I Offer</h2>
-          <p className="section-desc">
-            Combining full-stack web development with data analytics to build modern solutions.
-          </p>
         </div>
 
         <div className="services-grid">

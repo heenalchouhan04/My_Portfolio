@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import '../styles/Hero.css';
 import { handleImageError } from '../utils/handleImageError';
 
@@ -40,7 +40,6 @@ const Hero = ({ onOpenCvModal }) => {
                 className="btn btn-secondary hero-btn-secondary"
               >
                 <span>Get in Touch</span>
-                <Sparkles size={18} />
               </a>
             </div>
           </div>

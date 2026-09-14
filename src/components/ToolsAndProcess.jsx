@@ -3,36 +3,45 @@ import '../styles/ToolsAndProcess.css';
 
 const ToolsAndProcess = () => {
   const tools = [
-    { name: 'Figma', icon: '🎨' },
-    { name: 'Photoshop', icon: '🖼️' },
-    { name: 'Illustrator', icon: '✒️' },
-    { name: 'Adobe XD', icon: '📐' },
-    { name: 'Canva', icon: '✨' },
+    { name: 'HTML5', icon: '🌐' },
+    { name: 'CSS3', icon: '🎨' },
+    { name: 'JavaScript', icon: '⚡' },
     { name: 'React', icon: '⚛️' },
     { name: 'Node.js', icon: '🚀' },
-    { name: 'MongoDB', icon: '🍃' }
+    { name: 'Express.js', icon: '⚙️' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'Power BI', icon: '📊' },
+    { name: 'Git', icon: '🔀' },
+    { name: 'GitHub', icon: '🐙' },
+    { name: 'REST APIs', icon: '🔌' },
+    { name: 'Figma', icon: '📐' }
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'DISCOVER',
-      desc: 'Understanding user goals and the core problem.'
+      desc: 'Understand the problem and user needs'
     },
     {
       step: '02',
       title: 'PLAN',
-      desc: 'Outlining the best solution, wireframes & strategy.'
+      desc: 'Outline solution, wireframes, and tech stack'
     },
     {
       step: '03',
-      title: 'DESIGN',
-      desc: 'Designing prototypes & writing clean React code.'
+      title: 'DEVELOP',
+      desc: 'Build frontend + backend, connect APIs & database'
     },
     {
       step: '04',
+      title: 'VISUALIZE',
+      desc: 'Create dashboards in Power BI for insights'
+    },
+    {
+      step: '05',
       title: 'DELIVER',
-      desc: 'Releasing the final product with extreme care.'
+      desc: 'Test, deploy, and refine'
     }
   ];
 
@@ -40,10 +49,11 @@ const ToolsAndProcess = () => {
     <section id="tools" className="section-padding">
       <div className="container">
         <div className="tools-process-grid">
+          {/* Tools & Technologies (Flat Grid) */}
           <div>
             <div className="tools-section-header">
               <span className="tools-subtitle-badge">
-                TOOLS & TECHNOLOGIES
+                TOOLS &amp; TECHNOLOGIES
               </span>
             </div>
 
@@ -57,6 +67,7 @@ const ToolsAndProcess = () => {
             </div>
           </div>
 
+          {/* My Process */}
           <div>
             <div className="tools-section-header">
               <span className="tools-subtitle-badge">

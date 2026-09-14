@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import confetti from 'canvas-confetti';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
@@ -80,10 +80,6 @@ const Contact = () => {
         {/* ── Section Header ──────────────────────────────────────────────── */}
         <div className="section-header">
           <span className="section-subtitle">CONTACT DETAILS</span>
-          <h2 className="section-title">Send Me A Message</h2>
-          <p className="section-desc">
-            Reach out directly or use the form below to start a conversation.
-          </p>
         </div>
 
         <div className="contact-grid">
@@ -128,7 +124,6 @@ const Contact = () => {
                 {[
                   { icon: <LinkedinIcon size={20} />, href: 'https://linkedin.com/in/heenal', label: 'LinkedIn' },
                   { icon: <GithubIcon size={20} />, href: 'https://github.com/heenalchouhan04', label: 'GitHub' },
-                  { icon: <InstagramIcon size={20} />, href: 'https://instagram.com', label: 'Instagram' },
                 ].map((s, i) => (
                   <a
                     key={i}

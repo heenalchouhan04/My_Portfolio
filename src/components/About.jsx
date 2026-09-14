@@ -17,12 +17,6 @@ const About = () => {
         {/* ── Section Header ──────────────────────────────────────────────── */}
         <div className="section-header">
           <span className="section-subtitle">ABOUT ME</span>
-          <h2 className="section-title">
-            Beginner Full-Stack Developer &amp; Power BI Enthusiast
-          </h2>
-          <p className="section-desc">
-            How I structure my journey: building responsive web applications &amp; transforming raw data into clear insights.
-          </p>
         </div>
 
         {/* ── Top Grid: Profile Column (Left) + Role Cards (Right) ─────────── */}

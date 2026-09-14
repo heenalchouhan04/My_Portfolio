@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ExternalLink, Eye, Sparkles } from 'lucide-react';
-import { GithubIcon } from './SocialIcons';
+import { ExternalLink, Eye, CheckCircle2 } from 'lucide-react';
+import { LinkedinIcon, GithubIcon } from './SocialIcons';
 import '../styles/Projects.css';
 import { handleImageError } from '../utils/handleImageError';
 
@@ -10,73 +10,37 @@ const Projects = ({ onSelectProject }) => {
   const projectsData = [
     {
       id: 1,
-      title: 'NexStore E-Commerce Platform',
-      category: 'Web App',
-      image: '/images/project1.png',
-      tags: ['React.js', 'Node.js', 'MongoDB', 'Tailwind'],
-      summary: 'Full-stack e-commerce web application featuring live product filtering, cart checkout, payment gateway integration, and admin analytics dashboard.',
-      demoUrl: 'https://example.com/demo1',
-      githubUrl: 'https://github.com/heenalsingh/nexstore-ecommerce',
+      title: 'Netflix Content Insights Dashboard',
+      category: 'Power BI',
+      image: '/images/netflix_dashboard_2.png',
+      gallery: [
+        { id: 'trends', title: 'Analytics & Trends View', url: '/images/netflix_dashboard_2.png' },
+        { id: 'overview', title: 'Overview & KPI Metrics', url: '/images/netflix_dashboard_1.png' }
+      ],
+      tags: ['Power BI', 'Excel/CSV', 'Data Analytics', 'Dashboards'],
+      summary: 'Built an interactive dashboard analyzing Netflix’s catalog of movies and TV shows. It visualizes ratings distribution, content growth over time, and global viewership trends.',
+      highlights: [
+        'Movies vs. TV Shows split',
+        'Ratings breakdown (TV‑MA, TV‑14, PG, etc.)',
+        'Global viewership map',
+        'Content growth trend since 1925'
+      ],
+      linkedinUrl: 'https://linkedin.com/in/heenal',
+      githubUrl: 'https://github.com/heenalchouhan04',
+      demoUrl: 'https://linkedin.com/in/heenal',
       featured: true
-    },
-    {
-      id: 2,
-      title: 'FinVista Financial Analytics Hub',
-      category: 'UI/UX',
-      image: '/images/project2.png',
-      tags: ['Figma', 'UI/UX Design', 'React', 'Recharts'],
-      summary: 'Sleek dark & light theme financial dashboard designed for high-frequency trading insights, real-time telemetry charts, and portfolio tracking.',
-      demoUrl: 'https://example.com/demo2',
-      githubUrl: 'https://github.com/heenalsingh/finvista-dashboard',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'PulseFit Health & Fitness Mobile App',
-      category: 'Mobile',
-      image: '/images/project3.png',
-      tags: ['Mobile UI', 'Figma', 'React Native', 'Prototyping'],
-      summary: 'Intuitive iOS & Android workout tracker app interface with workout logging, calorie charts, gamified achievements, and social sharing.',
-      demoUrl: 'https://example.com/demo3',
-      githubUrl: 'https://github.com/heenalsingh/pulsefit-app',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Aura Studio Brand Identity',
-      category: 'Branding',
-      image: '/images/project1.png',
-      tags: ['Adobe Illustrator', 'Branding', 'Photoshop', 'Typography'],
-      summary: 'Complete brand guidelines, typography system, business cards, stationery, and packaging design for an upscale architectural design house.',
-      demoUrl: 'https://example.com/demo4',
-      githubUrl: 'https://github.com/heenalsingh/aura-branding',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'NeuralWriter AI Copywriting SaaS',
-      category: 'Web App',
-      image: '/images/project2.png',
-      tags: ['React', 'Node.js', 'OpenAI API', 'CSS Grid'],
-      summary: 'AI-driven content generation web app allowing users to write blogs, marketing emails, and social media posts with one click.',
-      demoUrl: 'https://example.com/demo5',
-      githubUrl: 'https://github.com/heenalsingh/neuralwriter-saas',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Lumina Smart Home IoT Portal',
-      category: 'UI/UX',
-      image: '/images/project3.png',
-      tags: ['Figma', 'System Design', 'Mobile UI', 'Prototyping'],
-      summary: 'Smart home device management portal supporting room scene presets, climate automation timers, and energy consumption insights.',
-      demoUrl: 'https://example.com/demo6',
-      githubUrl: 'https://github.com/heenalsingh/lumina-smarthome',
-      featured: false
     }
   ];
 
-  const categories = ['All', 'Web App', 'UI/UX', 'Mobile', 'Branding'];
+  const [activeImageMap, setActiveImageMap] = useState({
+    1: '/images/netflix_dashboard_2.png'
+  });
+
+  const handleSelectImage = (projectId, imgUrl) => {
+    setActiveImageMap(prev => ({ ...prev, [projectId]: imgUrl }));
+  };
+
+  const categories = ['All', 'Power BI'];
 
   const filteredProjects = activeFilter === 'All'
     ? projectsData
@@ -87,10 +51,6 @@ const Projects = ({ onSelectProject }) => {
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">PROJECTS SHOWCASE</span>
-          <h2 className="section-title">Featured Works & Case Studies</h2>
-          <p className="section-desc">
-            Explore a curated selection of my design & web development projects crafted for clients and modern products.
-          </p>
         </div>
 
         <div className="projects-filters">
@@ -113,7 +73,7 @@ const Projects = ({ onSelectProject }) => {
             >
               <div className="project-image-wrap">
                 <img
-                  src={project.image}
+                  src={activeImageMap[project.id] || project.image}
                   alt={project.title}
                   className="project-img"
                   onError={handleImageError}
@@ -122,6 +82,23 @@ const Projects = ({ onSelectProject }) => {
                 <span className="project-category-badge">
                   {project.category}
                 </span>
+
+                {project.gallery && project.gallery.length > 1 && (
+                  <div className="project-card-gallery-tabs">
+                    {project.gallery.map((g) => (
+                      <button
+                        key={g.id}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleSelectImage(project.id, g.url);
+                        }}
+                        className={`project-card-gallery-tab ${(activeImageMap[project.id] || project.image) === g.url ? 'active' : ''}`}
+                      >
+                        {g.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
 
                 <div className="project-overlay">
                   <button
@@ -132,12 +109,12 @@ const Projects = ({ onSelectProject }) => {
                   </button>
 
                   <a
-                    href={project.githubUrl}
+                    href={project.linkedinUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-secondary project-overlay-btn"
                   >
-                    <GithubIcon size={16} /> Code
+                    <LinkedinIcon size={16} /> LinkedIn
                   </a>
                 </div>
               </div>
@@ -151,31 +128,48 @@ const Projects = ({ onSelectProject }) => {
                     {project.summary}
                   </p>
 
+                  {/* Highlights List */}
+                  {project.highlights && (
+                    <div className="project-highlights-box">
+                      <div className="project-highlights-title">Key Highlights:</div>
+                      <ul className="project-highlights-list">
+                        {project.highlights.map((item, idx) => (
+                          <li key={idx}>
+                            <CheckCircle2 size={14} />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
                   <div className="project-tags">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="project-tag">
-                        {tag}
+                        #{tag}
                       </span>
                     ))}
                   </div>
                 </div>
 
                 <div className="project-card-footer">
-                  <button
-                    onClick={() => onSelectProject(project)}
-                    className="project-case-study-btn"
+                  <a
+                    href={project.linkedinUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link-btn project-linkedin-link"
                   >
-                    <span>View Case Study</span>
-                    <Sparkles size={14} />
-                  </button>
+                    <LinkedinIcon size={16} />
+                    <span>View on LinkedIn</span>
+                  </a>
 
                   <a
-                    href={project.demoUrl}
+                    href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="project-demo-link"
                   >
-                    <span>Live Demo</span>
+                    <span>GitHub Repo</span>
                     <ExternalLink size={14} />
                   </a>
                 </div>
