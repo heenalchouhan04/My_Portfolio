@@ -31,9 +31,11 @@
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2.2rem;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .project-card {

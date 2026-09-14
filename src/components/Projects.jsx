@@ -5,8 +5,6 @@ import '../styles/Projects.css';
 import { handleImageError } from '../utils/handleImageError';
 
 const Projects = ({ onSelectProject }) => {
-  const [activeFilter, setActiveFilter] = useState('All');
-
   const projectsData = [
     {
       id: 1,
@@ -17,13 +15,11 @@ const Projects = ({ onSelectProject }) => {
         { id: 'trends', title: 'Analytics & Trends View', url: '/images/netflix_dashboard_2.png' },
         { id: 'overview', title: 'Overview & KPI Metrics', url: '/images/netflix_dashboard_1.png' }
       ],
-      tags: ['Power BI', 'Excel/CSV', 'Data Analytics', 'Dashboards'],
-      summary: 'Built an interactive dashboard analyzing Netflix’s catalog of movies and TV shows. It visualizes ratings distribution, content growth over time, and global viewership trends.',
+      tags: ['Power BI', 'Excel/CSV', 'Data Analytics'],
+      summary: 'Interactive Power BI dashboard analyzing Netflix catalog, ratings distribution, and global viewership trends.',
       highlights: [
-        'Movies vs. TV Shows split',
-        'Ratings breakdown (TV‑MA, TV‑14, PG, etc.)',
-        'Global viewership map',
-        'Content growth trend since 1925'
+        'Movies vs. TV Shows split & ratings',
+        'Global viewership map & growth trend'
       ],
       linkedinUrl: 'https://linkedin.com/in/heenal',
       githubUrl: 'https://github.com/heenalchouhan04',
@@ -40,12 +36,6 @@ const Projects = ({ onSelectProject }) => {
     setActiveImageMap(prev => ({ ...prev, [projectId]: imgUrl }));
   };
 
-  const categories = ['All', 'Power BI'];
-
-  const filteredProjects = activeFilter === 'All'
-    ? projectsData
-    : projectsData.filter(p => p.category === activeFilter);
-
   return (
     <section id="projects" className="section-padding">
       <div className="container">
@@ -53,20 +43,8 @@ const Projects = ({ onSelectProject }) => {
           <span className="section-subtitle">PROJECTS SHOWCASE</span>
         </div>
 
-        <div className="projects-filters">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveFilter(cat)}
-              className={`projects-filter-btn ${activeFilter === cat ? 'active' : ''}`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projectsData.map((project) => (
             <div
               key={project.id}
               className="glass-card project-card"
@@ -128,10 +106,9 @@ const Projects = ({ onSelectProject }) => {
                     {project.summary}
                   </p>
 
-                  {/* Highlights List */}
+                  {/* Concise Highlights List */}
                   {project.highlights && (
                     <div className="project-highlights-box">
-                      <div className="project-highlights-title">Key Highlights:</div>
                       <ul className="project-highlights-list">
                         {project.highlights.map((item, idx) => (
                           <li key={idx}>
