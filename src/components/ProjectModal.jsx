@@ -100,7 +100,7 @@ const ProjectModal = ({ project, onClose }) => {
 
         <div className="modal-actions">
           <a
-            href={project.linkedinUrl || 'https://linkedin.com/in/heenal'}
+            href={project.linkedinUrl || 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/'}
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary project-modal-demo-btn"

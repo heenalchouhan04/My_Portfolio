@@ -21,9 +21,9 @@ const Projects = ({ onSelectProject }) => {
         'Movies vs. TV Shows split & ratings',
         'Global viewership map & growth trend'
       ],
-      linkedinUrl: 'https://linkedin.com/in/heenal',
+      linkedinUrl: 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/',
       githubUrl: 'https://github.com/heenalchouhan04',
-      demoUrl: 'https://linkedin.com/in/heenal',
+      demoUrl: 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/',
       featured: true
     }
   ];

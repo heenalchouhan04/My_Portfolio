@@ -122,7 +122,7 @@ const Contact = () => {
               <div className="contact-social-label">SOCIAL PROFILES</div>
               <div className="contact-social-links">
                 {[
-                  { icon: <LinkedinIcon size={20} />, href: 'https://linkedin.com/in/heenal', label: 'LinkedIn' },
+                  { icon: <LinkedinIcon size={20} />, href: 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/', label: 'LinkedIn' },
                   { icon: <GithubIcon size={20} />, href: 'https://github.com/heenalchouhan04', label: 'GitHub' },
                 ].map((s, i) => (
                   <a
