@@ -1,0 +1,84 @@
+/* ==========================================================================
+   PROJECT MODAL COMPONENT STYLES
+   ========================================================================== */
+
+.project-modal-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.project-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-modal-category {
+  font-size: 0.8rem;
+  font-weight: 800;
+  background-color: var(--accent-lavender-light);
+  color: var(--accent-lavender);
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+}
+
+.project-modal-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.project-modal-summary {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.project-modal-tech-section {
+  margin-bottom: 2rem;
+}
+
+.project-modal-tech-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.project-modal-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-modal-tech-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.35rem 0.8rem;
+  border-radius: 10px;
+}
+
+.project-modal-demo-btn {
+  flex-grow: 1;
+  padding: 0.85rem;
+}
+
+.project-modal-github-btn {
+  padding: 0.85rem 1.5rem;
+}

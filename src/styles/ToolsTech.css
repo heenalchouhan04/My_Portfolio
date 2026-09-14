@@ -1,0 +1,83 @@
+/* ==========================================================================
+   TOOLS TECH COMPONENT STYLES
+   ========================================================================== */
+
+.tools-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.tools-tech-card {
+  padding: 1.6rem 1.4rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: var(--bg-card);
+  transition: all 0.3s ease;
+}
+
+.tools-tech-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.tools-tech-icon--figma { background-color: rgba(242, 78, 30, 0.1); box-shadow: 0 4px 12px rgba(242, 78, 30, 0.1); }
+.tools-tech-icon--photoshop { background-color: rgba(49, 168, 255, 0.1); box-shadow: 0 4px 12px rgba(49, 168, 255, 0.1); }
+.tools-tech-icon--illustrator { background-color: rgba(255, 154, 0, 0.1); box-shadow: 0 4px 12px rgba(255, 154, 0, 0.1); }
+.tools-tech-icon--xd { background-color: rgba(255, 97, 246, 0.1); box-shadow: 0 4px 12px rgba(255, 97, 246, 0.1); }
+.tools-tech-icon--canva { background-color: rgba(0, 196, 204, 0.1); box-shadow: 0 4px 12px rgba(0, 196, 204, 0.1); }
+.tools-tech-icon--react { background-color: rgba(97, 218, 251, 0.1); box-shadow: 0 4px 12px rgba(97, 218, 251, 0.1); }
+.tools-tech-icon--nodejs { background-color: rgba(51, 153, 51, 0.1); box-shadow: 0 4px 12px rgba(51, 153, 51, 0.1); }
+.tools-tech-icon--mongodb { background-color: rgba(71, 162, 72, 0.1); box-shadow: 0 4px 12px rgba(71, 162, 72, 0.1); }
+.tools-tech-icon--tailwind { background-color: rgba(6, 182, 212, 0.1); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.1); }
+.tools-tech-icon--htmlcss { background-color: rgba(227, 79, 38, 0.1); box-shadow: 0 4px 12px rgba(227, 79, 38, 0.1); }
+
+.tools-tech-details {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.tools-tech-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tools-tech-category {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tools-tech-level {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.tools-tech-level--figma { background-color: rgba(242, 78, 30, 0.1); color: #F24E1E; }
+.tools-tech-level--photoshop { background-color: rgba(49, 168, 255, 0.1); color: #31A8FF; }
+.tools-tech-level--illustrator { background-color: rgba(255, 154, 0, 0.1); color: #FF9A00; }
+.tools-tech-level--xd { background-color: rgba(255, 97, 246, 0.1); color: #FF61F6; }
+.tools-tech-level--canva { background-color: rgba(0, 196, 204, 0.1); color: #00C4CC; }
+.tools-tech-level--react { background-color: rgba(97, 218, 251, 0.1); color: #61DAFB; }
+.tools-tech-level--nodejs { background-color: rgba(51, 153, 51, 0.1); color: #339933; }
+.tools-tech-level--mongodb { background-color: rgba(71, 162, 72, 0.1); color: #47A248; }
+.tools-tech-level--tailwind { background-color: rgba(6, 182, 212, 0.1); color: #06B6D4; }
+.tools-tech-level--htmlcss { background-color: rgba(227, 79, 38, 0.1); color: #E34F26; }

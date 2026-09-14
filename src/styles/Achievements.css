@@ -1,0 +1,79 @@
+/* ==========================================================================
+   ACHIEVEMENTS COMPONENT STYLES
+   ========================================================================== */
+
+.achievements-section {
+  padding: 1.5rem 0;
+}
+
+.stats-card-container {
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--bg-card);
+  border-radius: 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.stat-card-item:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+.stat-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--accent-lavender-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.stat-icon-wrapper svg {
+  color: var(--accent-lavender);
+}
+
+.stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .stats-card-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+  .stat-card-item {
+    border-right: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-card-container {
+    grid-template-columns: 1fr !important;
+  }
+}

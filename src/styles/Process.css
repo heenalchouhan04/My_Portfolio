@@ -1,0 +1,82 @@
+/* ==========================================================================
+   PROCESS COMPONENT STYLES
+   ========================================================================== */
+
+.process-section {
+  background-color: var(--bg-secondary);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.process-card {
+  padding: 2.2rem 1.8rem;
+  border-radius: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-card);
+}
+
+.process-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.process-card-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-step-icon--lavender { color: var(--accent-lavender); }
+.process-step-icon--skyblue { color: var(--accent-skyblue); }
+.process-step-icon--mint { color: var(--accent-mint); }
+.process-step-icon--peach { color: var(--accent-peach, #f59e0b); }
+
+.process-step-number {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  opacity: 0.8;
+}
+
+.process-step-number--lavender { color: var(--accent-lavender); }
+.process-step-number--skyblue { color: var(--accent-skyblue); }
+.process-step-number--mint { color: var(--accent-mint); }
+.process-step-number--peach { color: var(--accent-peach, #f59e0b); }
+
+.process-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.process-card-subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.process-card-subtitle--lavender { color: var(--accent-lavender); }
+.process-card-subtitle--skyblue { color: var(--accent-skyblue); }
+.process-card-subtitle--mint { color: var(--accent-mint); }
+.process-card-subtitle--peach { color: var(--accent-peach, #f59e0b); }
+
+.process-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}

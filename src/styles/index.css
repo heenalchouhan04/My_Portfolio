@@ -1,0 +1,292 @@
+/* ==========================================================================
+   HEENAL SINGH CHOUHAN PORTFOLIO - ELEGANT LAVENDER DESIGN SYSTEM
+   Inspired strictly by Folio Tailwind & Lavender Digital Designer aesthetics
+   ========================================================================== */
+
+:root {
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* LIGHT THEME (Rich Lavender Tone-on-Tone Aesthetic) */
+  --bg-primary: #ebe5f5;          /* Soft pastel lavender background */
+  --bg-secondary: #f4effa;        /* Lighter soft lavender section bg */
+  --bg-card: #f9f6fc;             /* Soft porcelain lavender card container */
+  --bg-card-hover: #ffffff;
+  --bg-glass: rgba(244, 239, 250, 0.88);
+
+  --text-main: #2b223d;           /* Deep violet-purple (no harsh black) */
+  --text-muted: #6a5e80;          /* Soft lavender-grey text */
+  --text-light: #9486b0;          /* Subtitle muted text */
+
+  --accent-lavender: #8254d8;     /* Rich signature lavender purple */
+  --accent-lavender-dark: #6839be;
+  --accent-lavender-light: #e5dbf7;
+  --accent-lavender-subtle: #f1ea90;
+
+  --accent-purple-soft: #d8c7f7;
+  --accent-skyblue: #64b5f6;
+  --accent-mint: #4db6ac;
+
+  --border-color: rgba(130, 84, 216, 0.14);
+  --border-color-hover: rgba(130, 84, 216, 0.38);
+
+  --shadow-sm: 0 4px 12px rgba(105, 61, 184, 0.05);
+  --shadow-md: 0 10px 30px rgba(105, 61, 184, 0.09);
+  --shadow-lg: 0 20px 45px rgba(105, 61, 184, 0.14);
+
+  --gradient-hero: linear-gradient(135deg, #a17fe0 0%, #7647d6 100%);
+  --gradient-purple-text: linear-gradient(135deg, #9b72e6 0%, #683ab7 100%);
+  --gradient-card-lavender: linear-gradient(135deg, #f3ecfc 0%, #e8ddf8 100%);
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* DARK THEME (Deep Violet & Luminous Lavender) */
+[data-theme="dark"] {
+  --bg-primary: #120d1d;          /* Deep rich dark violet backdrop */
+  --bg-secondary: #1a1429;
+  --bg-card: rgba(30, 23, 46, 0.85);
+  --bg-card-hover: rgba(42, 32, 64, 0.95);
+  --bg-glass: rgba(26, 20, 41, 0.88);
+
+  --text-main: #f2ecfc;
+  --text-muted: #b4a6d1;
+  --text-light: #8372a6;
+
+  --accent-lavender: #b08bf8;
+  --accent-lavender-dark: #9264f3;
+  --accent-lavender-light: rgba(176, 139, 248, 0.18);
+  --accent-lavender-subtle: rgba(176, 139, 248, 0.1);
+
+  --border-color: rgba(176, 139, 248, 0.14);
+  --border-color-hover: rgba(176, 139, 248, 0.4);
+
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-lavender);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-lavender-dark);
+}
+
+/* UTILITY & REUSABLE CLASSES */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5.5rem 0;
+}
+
+.gradient-text {
+  background: var(--gradient-purple-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-color);
+  border-radius: 26px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.glass-card:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background: var(--accent-lavender);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(130, 84, 216, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--accent-lavender-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(130, 84, 216, 0.45);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-lavender-light);
+  color: var(--accent-lavender);
+  border-color: var(--accent-lavender);
+  transform: translateY(-2px);
+}
+
+.circle-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.circle-arrow-btn:hover {
+  background: var(--accent-lavender);
+  color: #ffffff;
+  border-color: var(--accent-lavender);
+  transform: scale(1.08);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.8rem;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-lavender);
+  background: var(--accent-lavender-light);
+  padding: 0.4rem 1.2rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-main);
+}
+
+.section-desc {
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out 2s infinite;
+}
+
+/* IMAGE LOAD ERROR FALLBACKS */
+.image-load-error {
+  display: none;
+}
+
+.project-image-wrap:has(.image-load-error),
+.project-modal-image:has(.image-load-error) {
+  background: var(--gradient-hero);
+}
+
+.expertise-image-container:has(.image-load-error) {
+  background: var(--gradient-card-lavender);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 992px) {
+  .section-padding { padding: 4rem 0; }
+  .section-title { font-size: 2.1rem; }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+  .section-padding { padding: 3.2rem 0; }
+  .section-title { font-size: 1.8rem; }
+}

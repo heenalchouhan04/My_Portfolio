@@ -1,0 +1,106 @@
+/* ==========================================================================
+   TOOLS AND PROCESS COMPONENT STYLES
+   ========================================================================== */
+
+.tools-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.tools-section-header {
+  margin-bottom: 1.5rem;
+}
+
+.tools-subtitle-badge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.tool-card {
+  padding: 1.4rem 0.8rem;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--bg-card);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.tool-icon {
+  font-size: 1.8rem;
+}
+
+.tool-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.process-card {
+  padding: 1.2rem 1.5rem;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.process-step-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background-color: var(--accent-lavender-light);
+  color: var(--accent-lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.process-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+  color: var(--text-main);
+}
+
+.process-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .tools-process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
