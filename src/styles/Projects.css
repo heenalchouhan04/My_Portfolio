@@ -34,11 +34,13 @@
   display: flex;
   justify-content: center;
   gap: 2.2rem;
-  max-width: 680px;
+  width: 100%;
+  max-width: 450px;
   margin: 0 auto;
 }
 
 .project-card {
+  width: 100%;
   border-radius: 28px;
   overflow: hidden;
   display: flex;
