@@ -31,11 +31,11 @@
 }
 
 .projects-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
   width: 100%;
-  max-width: 450px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -53,6 +53,96 @@
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-lavender);
+}
+
+.project-delete-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: rgba(239, 68, 68, 0.85);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.project-delete-btn:hover {
+  transform: scale(1.1);
+  background-color: rgb(220, 38, 38);
+}
+
+/* ── Add Project Card (Right Side) ───────────────────────────────────────── */
+.add-project-card {
+  border-radius: 28px;
+  border: 2px dashed var(--border-color);
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  text-align: center;
+}
+
+.add-project-card:hover {
+  border-color: var(--accent-lavender);
+  background-color: rgba(139, 114, 224, 0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(139, 114, 224, 0.15);
+}
+
+.add-project-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-project-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-project-card:hover .add-project-icon-circle {
+  transform: scale(1.1);
+  background-color: var(--accent-lavender);
+  color: #ffffff;
+}
+
+.add-project-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.add-project-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.add-project-btn-trigger {
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.3rem;
+  font-size: 0.88rem;
 }
 
 .project-image-wrap {
