@@ -21,9 +21,9 @@ const Projects = ({ onSelectProject }) => {
         'Movies vs. TV Shows split & ratings',
         'Global viewership map & growth trend'
       ],
-      linkedinUrl: 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/',
+      linkedinUrl: 'https://www.linkedin.com/posts/heenal-singh-chouhan-7a975133a_powerbi-dataanalytics-datavisualization-activity-7435544281144258561-yQmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUvFDEBHCi50IuPrMRjbW8joTw_kgRoT-I',
       githubUrl: 'https://github.com/heenalchouhan04',
-      demoUrl: 'https://www.linkedin.com/in/heenal-singh-chouhan-7a975133a/',
+      demoUrl: 'https://www.linkedin.com/posts/heenal-singh-chouhan-7a975133a_powerbi-dataanalytics-datavisualization-activity-7435544281144258561-yQmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUvFDEBHCi50IuPrMRjbW8joTw_kgRoT-I',
       featured: true
     }
   ];
