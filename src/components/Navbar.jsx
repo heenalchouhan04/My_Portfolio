@@ -49,29 +49,39 @@ const Navbar = ({ theme, toggleTheme }) => {
       <div className="container navbar-container">
         <a href="#home" className="navbar-logo">
           <span className="logo-mark">
-            <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="logo-svg">
-              {/* Left bracket */}
-              <path d="M10 4 L4 18 L10 32" stroke="url(#logoGrad)" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              {/* Right bracket */}
-              <path d="M34 4 L40 18 L34 32" stroke="url(#logoGrad)" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              {/* H letter */}
-              <path d="M14 12 L14 24 M14 18 L20 18 M20 12 L20 24" stroke="url(#logoGrad)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              {/* S letter */}
-              <path d="M23 13.5 Q23 12 25 12 L28 12 Q30 12 30 14 Q30 16 28 17 L25 17 Q23 17 23 19 Q23 21 25 21 L28 21 Q30 21 30 19.5" stroke="url(#logoGrad)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              {/* Spark dot above */}
-              <circle cx="38" cy="6" r="2.5" fill="#a78bfa"/>
-              <circle cx="38" cy="6" r="4.5" fill="rgba(167,139,250,0.2)"/>
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="logo-svg">
               <defs>
-                <linearGradient id="logoGrad" x1="0" y1="0" x2="44" y2="36" gradientUnits="userSpaceOnUse">
+                <linearGradient id="hexGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
                   <stop offset="0%" stopColor="#c084fc"/>
-                  <stop offset="100%" stopColor="#818cf8"/>
+                  <stop offset="100%" stopColor="#6366f1"/>
                 </linearGradient>
               </defs>
+              {/* Hexagon shape */}
+              <polygon
+                points="19,2 34,10.5 34,27.5 19,36 4,27.5 4,10.5"
+                fill="url(#hexGrad)"
+                opacity="0.15"
+              />
+              <polygon
+                points="19,2 34,10.5 34,27.5 19,36 4,27.5 4,10.5"
+                fill="none"
+                stroke="url(#hexGrad)"
+                strokeWidth="1.8"
+              />
+              {/* H letter centered */}
+              <text
+                x="19"
+                y="25"
+                textAnchor="middle"
+                fontSize="16"
+                fontWeight="800"
+                fontFamily="Inter, sans-serif"
+                fill="url(#hexGrad)"
+              >H</text>
             </svg>
           </span>
           <span className="logo-name">
-            <span className="logo-name-heenal">Heenal</span>
-            <span className="logo-name-dot">.</span>
+            <span className="logo-name-heenal">Heenal</span><span className="logo-name-dot">.</span>
           </span>
         </a>
 
