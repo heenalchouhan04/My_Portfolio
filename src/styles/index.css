@@ -5,8 +5,8 @@
 
 :root {
   /* Fonts */
-  --font-heading: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* LIGHT THEME (Rich Lavender Tone-on-Tone Aesthetic) */
   --bg-primary: #ebe5f5;          /* Soft pastel lavender background */
