@@ -110,7 +110,7 @@ const ProjectModal = ({ project, onClose }) => {
           </a>
 
           <a
-            href={project.githubUrl || 'https://github.com/heenalchouhan04'}
+            href={project.githubUrl || 'https://github.com/heenalchouhan04/Netflix_Dashboard'}
             target="_blank"
             rel="noreferrer"
             className="btn btn-secondary project-modal-github-btn"

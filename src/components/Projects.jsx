@@ -31,10 +31,12 @@ const initialProjects = [
 
 const Projects = ({ onSelectProject }) => {
   const [projects, setProjects] = useState(() => {
-    const saved = localStorage.getItem('heenal_portfolio_projects');
+    const saved = localStorage.getItem('heenal_portfolio_projects_v2');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        const userAdded = parsed.filter(p => !p.isDefault && p.id !== 1);
+        return [initialProjects[0], ...userAdded];
       } catch (e) {
         return initialProjects;
       }
@@ -49,7 +51,7 @@ const Projects = ({ onSelectProject }) => {
   });
 
   useEffect(() => {
-    localStorage.setItem('heenal_portfolio_projects', JSON.stringify(projects));
+    localStorage.setItem('heenal_portfolio_projects_v2', JSON.stringify(projects));
   }, [projects]);
 
   const handleSelectImage = (projectId, imgUrl) => {
