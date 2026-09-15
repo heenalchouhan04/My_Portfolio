@@ -22,7 +22,7 @@ const initialProjects = [
       'Global viewership map & growth trend'
     ],
     linkedinUrl: 'https://www.linkedin.com/posts/heenal-singh-chouhan-7a975133a_powerbi-dataanalytics-datavisualization-activity-7435544281144258561-yQmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUvFDEBHCi50IuPrMRjbW8joTw_kgRoT-I',
-    githubUrl: 'https://github.com/heenalchouhan04',
+    githubUrl: 'https://github.com/heenalchouhan04/Netflix_Dashboard',
     demoUrl: 'https://www.linkedin.com/posts/heenal-singh-chouhan-7a975133a_powerbi-dataanalytics-datavisualization-activity-7435544281144258561-yQmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUvFDEBHCi50IuPrMRjbW8joTw_kgRoT-I',
     featured: true,
     isDefault: true
