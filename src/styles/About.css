@@ -64,7 +64,7 @@
 
 .caption-title {
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -86,7 +86,7 @@
 
 .intro-badge {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--accent-lavender);
@@ -132,7 +132,7 @@
 
 .role-title {
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
   margin-bottom: 0.25rem;
 }
@@ -279,7 +279,7 @@
 
 .highlight-title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
   margin: 0;
 }
@@ -329,7 +329,7 @@
 
 .cta-banner-label {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
   color: var(--accent-lavender);
   text-transform: uppercase;
@@ -337,7 +337,7 @@
 
 .cta-banner-heading {
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
   margin-top: 0.3rem;
   margin-bottom: 0;

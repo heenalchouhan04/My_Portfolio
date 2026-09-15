@@ -52,7 +52,7 @@
 
 .project-modal-category {
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   background-color: var(--accent-lavender-light);
   color: var(--accent-lavender);
   padding: 0.3rem 0.9rem;
@@ -61,7 +61,7 @@
 
 .project-modal-title {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 

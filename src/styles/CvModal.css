@@ -22,7 +22,7 @@
 
 .cv-modal-title {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .cv-modal-subtitle {
@@ -46,7 +46,7 @@
 
 .cv-modal-card-label {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-lavender);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 0.6rem;
 }

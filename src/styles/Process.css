@@ -48,7 +48,7 @@
 
 .process-step-number {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   font-family: var(--font-heading);
   opacity: 0.8;
 }
@@ -60,7 +60,7 @@
 
 .process-card-title {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.2rem;
 }
 

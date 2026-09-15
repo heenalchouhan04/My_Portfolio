@@ -8,6 +8,7 @@
   left: 0;
   right: 0;
   z-index: 100;
+  font-family: var(--font-body);
   transition: all 0.3s ease;
 }
 
@@ -59,7 +60,7 @@
 .logo-name {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.3px;
   line-height: 1;
 }
@@ -90,6 +91,7 @@
 }
 
 .nav-link {
+  font-family: var(--font-body);
   font-weight: 500;
   color: var(--text-muted);
   position: relative;
@@ -182,6 +184,7 @@
 }
 
 .mobile-nav-link {
+  font-family: var(--font-body);
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-main);

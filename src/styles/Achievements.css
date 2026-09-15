@@ -47,7 +47,7 @@
 
 .stat-number {
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 600;
   font-family: var(--font-heading);
   line-height: 1;
   margin-bottom: 0.4rem;
@@ -56,7 +56,7 @@
 
 .stat-label {
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 1px;
   color: var(--text-muted);
   text-transform: uppercase;

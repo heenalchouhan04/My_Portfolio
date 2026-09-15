@@ -45,7 +45,7 @@
 
 .contact-cta-label {
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2px;
   color: var(--accent-lavender);
   text-transform: uppercase;
@@ -55,7 +55,7 @@
 
 .contact-cta-title {
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
   line-height: 1.1;
 }
@@ -91,7 +91,7 @@
 
 .contact-info-title {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   color: var(--text-main);
 }
@@ -145,7 +145,7 @@
 
 .contact-card-value {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -159,7 +159,7 @@
 
 .contact-social-label {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-muted);
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -208,7 +208,7 @@
 
 .contact-success-title {
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.8rem;
   color: var(--text-main);
 }

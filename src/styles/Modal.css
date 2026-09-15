@@ -62,7 +62,7 @@
 
 .modal-title {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.4rem;
   color: var(--accent-lavender);
 }
@@ -82,7 +82,7 @@
 
 .modal-section-label {
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.8rem;

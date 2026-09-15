@@ -36,7 +36,7 @@
 
 .hero-subtitle {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 2.5px;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -55,7 +55,7 @@
 
 .hero-title {
   font-size: 3.2rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;

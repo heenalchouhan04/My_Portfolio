@@ -75,7 +75,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 textAnchor="middle"
                 fontSize="16"
                 fontWeight="800"
-                fontFamily="Inter, sans-serif"
+                fontFamily="var(--font-heading)"
                 fill="url(#hexGrad)"
               >H</text>
             </svg>

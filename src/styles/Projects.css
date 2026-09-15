@@ -127,7 +127,7 @@
 
 .add-project-card-title {
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -172,7 +172,7 @@
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-lavender);
   border: 1px solid var(--border-color);
   z-index: 2;
@@ -244,7 +244,7 @@
 
 .project-card-title {
   font-size: 1.08rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.4rem;
   color: var(--text-main);
 }
@@ -267,7 +267,7 @@
 
 .project-highlights-title {
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-lavender);
   text-transform: uppercase;
   letter-spacing: 0.5px;
