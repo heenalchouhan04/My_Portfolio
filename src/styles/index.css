@@ -5,8 +5,8 @@
 
 :root {
   /* Fonts */
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* LIGHT THEME (Rich Lavender Tone-on-Tone Aesthetic) */
   --bg-primary: #ebe5f5;          /* Soft pastel lavender background */
