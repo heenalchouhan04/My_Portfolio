@@ -32,16 +32,15 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 340px));
+  gap: 1.5rem;
   width: 100%;
-  max-width: 950px;
-  margin: 0 auto;
+  justify-content: start;
 }
 
 .project-card {
   width: 100%;
-  border-radius: 28px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -57,14 +56,14 @@
 
 .project-delete-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   background-color: rgba(239, 68, 68, 0.85);
   color: #ffffff;
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,16 +79,16 @@
 
 /* ── Add Project Card (Right Side) ───────────────────────────────────────── */
 .add-project-card {
-  border-radius: 28px;
+  border-radius: 20px;
   border: 2px dashed var(--border-color);
   background-color: var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 420px;
+  min-height: 330px;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 2rem;
+  padding: 1.4rem;
   text-align: center;
 }
 
@@ -104,12 +103,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .add-project-icon-circle {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -127,28 +126,28 @@
 }
 
 .add-project-card-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-main);
 }
 
 .add-project-card-desc {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  line-height: 1.5;
-  max-width: 260px;
+  line-height: 1.4;
+  max-width: 220px;
 }
 
 .add-project-btn-trigger {
-  margin-top: 0.5rem;
-  padding: 0.65rem 1.3rem;
-  font-size: 0.88rem;
+  margin-top: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.82rem;
 }
 
 .project-image-wrap {
   position: relative;
   width: 100%;
-  height: 230px;
+  height: 175px;
   overflow: hidden;
   background-color: var(--bg-secondary);
 }
@@ -166,13 +165,13 @@
 
 .project-category-badge {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 12px;
+  left: 12px;
   background-color: var(--bg-glass);
   backdrop-filter: blur(12px);
-  padding: 0.35rem 0.9rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 800;
   color: var(--accent-lavender);
   border: 1px solid var(--border-color);
@@ -181,19 +180,19 @@
 
 .project-card-gallery-tabs {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
   z-index: 2;
 }
 
 .project-card-gallery-tab {
   flex: 1;
-  padding: 0.35rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.72rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.68rem;
   font-weight: 700;
   background-color: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
@@ -221,7 +220,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -231,12 +230,12 @@
 }
 
 .project-overlay-btn {
-  padding: 0.65rem 1.2rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
 }
 
 .project-card-body {
-  padding: 1.6rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -244,26 +243,26 @@
 }
 
 .project-card-title {
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 800;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   color: var(--text-main);
 }
 
 .project-card-summary {
   color: var(--text-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
 }
 
 /* Highlights Box */
 .project-highlights-box {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 0.85rem 1rem;
-  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-highlights-title {

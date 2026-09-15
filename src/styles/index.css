@@ -221,21 +221,18 @@ button {
 }
 
 .section-header {
-  text-align: center;
-  margin-bottom: 3.8rem;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .section-subtitle {
   display: inline-block;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 2.2px;
   text-transform: uppercase;
   color: var(--accent-lavender);
-  background: var(--accent-lavender-light);
-  padding: 0.4rem 1.2rem;
-  border-radius: 9999px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-title {

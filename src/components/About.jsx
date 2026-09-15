@@ -4,7 +4,6 @@ import {
   BarChart3, 
   Rocket, 
   Lightbulb, 
-  Heart, 
   CheckCircle2
 } from 'lucide-react';
 import '../styles/About.css';
@@ -31,13 +30,6 @@ const About = () => {
                   className="about-photo-img"
                   onError={handleImageError}
                 />
-              </div>
-              <div className="about-photo-caption">
-                <Heart size={16} className="caption-heart" />
-                <div>
-                  <div className="caption-title">Profile Photo</div>
-                  <div className="caption-sub">Friendly &amp; Professional • Udaipur, RJ</div>
-                </div>
               </div>
             </div>
 
